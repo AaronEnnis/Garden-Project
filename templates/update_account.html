@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+	 
+	{% block body %}	
+	<form action='/AccountUpdated' method='POST'>
+        <br>
+		<h1>Update Account</h1>
+		<input type="TEXT" name="name" autocomplete="off" placeholder="Name" > <br>
+		<input type="email" name="email" autocomplete="off" placeholder="Email" > <br>
+		<input type="Password" name="new_password" autocomplete="off" placeholder="New password" > <br>
+		<br>
+		<input type="Password" name="password1" autocomplete="off" placeholder="Current password" required> <br>
+		<input type="Password" name="password2" autocomplete="off" placeholder="Re-enter password" required> <br> 
+		 
+		<br><input type="SUBMIT" name="update" value="Update">
+		<input type="BUTTON" onclick="window.location.href='http://127.0.0.1:5000/Profile'" name="cancel" value="Cancel"> 
+	</form> 
+	{% endblock %}

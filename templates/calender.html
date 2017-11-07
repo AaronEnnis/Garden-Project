@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+	 
+	{% block body %}	
+	<form>
+	<h1>Calendar </h1>
+	{{word}}
+	<br><br>
+	{% for veg_name, description in schedules %}    
+	    <table>
+			<tr>
+				<th>Name</th><th>To do</th>
+			</tr> 
+            <tr>	
+							
+                <td>{{veg_name}}</td>
+                <td>{{description}}</td>				
+            </tr>  
+						
+		</table>
+		<br>
+	{% endfor %}
+		<br><br><input type="BUTTON" onclick="window.location.href='http://127.0.0.1:5000/Home'" name="exit" value="Exit"> 
+	</form>
+	{% endblock %}
+	

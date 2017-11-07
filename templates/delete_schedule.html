@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+	 
+	{% block body %}	
+	<form action='/ScheduleDeleted' method='POST'>
+	
+	<h1>Are you sure? </h1><br>
+	
+    <table>
+        <tr>
+            <th>Name</th><th>Quantity</th><th>Sow Date</th>
+        </tr>
+            <tr>				
+                <td>{{veg_name}}</td>
+                <td>{{quantity}}</td>
+                <td>{{sDate}}</td>
+            </tr>
+    </table>
+
+		<input type="hidden" name="veg_id" value={{veg_id}}>
+		<input type="hidden" name="quantity" value={{quantity}}>
+		<input type="hidden" name="schedule_id" value={{sID}}>
+		 <!--	from here up for pythonanywhere	 -->
+		 
+		<br><input type="SUBMIT" name="delete" value="Delete">
+		<input type="BUTTON" onclick="window.location.href='http://127.0.0.1:5000/Schedules'" name="cancel" value="Cancel"> 
+	</form>
+	{% endblock %}
+	

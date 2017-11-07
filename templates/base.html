@@ -1,0 +1,150 @@
+<html>
+    <head>
+		<title>{{ title }}</title>
+		<style>
+body {
+    background-color: #0c830c;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+	text-align: center;
+	width: 97%;
+}
+
+table, td, th {
+    border: 5px solid #000000;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+}
+
+td {
+    padding: 15px;
+	font-weight: bold;
+}
+
+th {
+	background-color: #c7c3c3;
+    color: black;
+	padding: 15px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+tr:hover{background-color:#d0d4d0}
+
+p {
+    font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+}
+
+h1 {
+	font-family: "Times New Roman", Times, serif;
+    font-size: 50px;
+}
+
+#datalist { 
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=button] {
+    background-color: #c7c3c3;
+    border: none;
+    color: black;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 12px;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+}
+
+input[type=text], select {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=number], select {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password], select {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=email], select {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=datalist], select {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: #c7c3c3;
+    border: none;
+    color: black;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 12px;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+}
+
+		</style>
+    </head>
+    <body>
+	<div>
+	{% block body %}
+
+	{% endblock %}
+	</div>
+
+    </body>
+</html>

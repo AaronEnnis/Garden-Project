@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+	 
+	{% block body %}	
+	<form action='/DeleteAccount' method='POST'>
+	<h1>Profile</h1>
+	
+	<input type="hidden" name="user_id" value={{user_id}}>
+	
+	<table>
+        <tr>
+            <th>Name</th><th>Email</th><th>Number of schedules</th><th>Plot Size</th><th>Plot Available</th>
+        </tr>
+		{% for user_name, email, num_of_schedules, plot_size, plot_available in profile %}
+				<input type="hidden" name="name" value={{user_name}}>
+				<input type="hidden" name="email" value={{email}}>
+				<input type="hidden" name="num_of_sch" value={{num_of_schedules}}>
+				<input type="hidden" name="plot_size" value={{plot_size}}>
+				<input type="hidden" name="plot_available" value={{plot_available}}>
+				
+
+            <tr>				
+                <td>{{user_name}}</td>
+                <td>{{email}}</td>
+                <td>{{num_of_schedules}}</td>
+				<td>{{plot_size}} sq ft</td>
+				<td>{{plot_available}}cm</td>
+				<td><input type="BUTTON" onclick="window.location.href='http://127.0.0.1:5000/UpdateAccount'" name="update" value="Update">  </td>
+				<td><input type="SUBMIT" name="delete" value="Delete"> </td>
+				
+            </tr>
+    </table>
+		{% endfor %}
+	</form>
+		<br><br><input type="BUTTON" onclick="window.location.href='http://127.0.0.1:5000/Home'" name="back" value="Back"> 
+	{% endblock %}
+	

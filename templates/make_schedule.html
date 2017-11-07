@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+	 
+	{% block body %}	
+	<form action='/ScheduleCreated' method='POST'>
+	<h1>Make a schedule </h1>
+        <br>
+		<p>Plants:</p>
+		<input id='datalist' list="plants" name="plants" autocomplete="off" required>
+	    <datalist id="plants">
+		{% for v_names in veg_names %} 
+			<option value={{v_names}}>
+		{% endfor %}
+		</datalist> <br>
+        <p>Quantity: </p>
+		<input type="number" min='1' name="quantity" required> <br>
+		 
+		<br><input type="SUBMIT" name="create" value="Create">
+		<br><input type="BUTTON" onclick="window.location.href='http://127.0.0.1:5000/Home'" name="exit" value="Exit"> 
+	</form>
+	{% endblock %}
+	

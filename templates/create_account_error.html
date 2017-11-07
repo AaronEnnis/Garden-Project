@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+	 
+	{% block body %}	
+	<form action='/AccountCreated' method='POST'>
+        <br>
+		<h1>Create Account</h1>
+		<p>#This Email is already in use</p>
+		<input type="TEXT" name="name" autocomplete="off" placeholder="Name" required> <br>
+		<input type="email" name="email" autocomplete="off" placeholder="Email" required> <br>
+		<input type="Password" name="password" autocomplete="off" placeholder="Password" required> <br>
+		<input type="Number" name="plot" autocomplete="off" placeholder="Plot Size in sq foot" min='1' required> <br>
+		 
+		<br><input type="SUBMIT" name="create" value="Create">
+		<input type="BUTTON" onclick="window.location.href='http://127.0.0.1:5000/'" name="cancel" value="Cancel"> 
+		 </form> 
+	{% endblock %}
+	

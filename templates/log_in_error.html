@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+	 
+	{% block body %}	
+	<form action='/Home' method='POST'>
+        <br>
+		
+		<h1>Garden Project</h1>
+		<p>#Email or Password incorrect</p>
+		<input type="TEXT" name="email" autocomplete="off" placeholder="Email" required> <br>
+		<input type="Password" name="password" autocomplete="off" placeholder="Password" required> <br>
+		 
+		<br><input type="SUBMIT" name="signIn" value="Sign In">
+		<input type="BUTTON" onclick="window.location.href='http://127.0.0.1:5000/CreateAccount'" name="create" value="Create Account">
+	
+	</form> 
+	{% endblock %}
+	

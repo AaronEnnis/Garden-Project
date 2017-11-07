@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+	 
+	{% block body %}	
+	<form>
+	<h1>{{plant}}</h1>
+        <br>
+		<b><p>Sowing:</b> </p>
+		<p>{{sowing}}</p><br>
+		<b><p>Growing: </b></p>
+		<p>{{growing}}</p><br>
+		<b><p>Harvesting: </b></p> 
+		<p>{{harvesting}}</p>
+		 
+		<br><input type="BUTTON" onclick="window.location.href='http://127.0.0.1:5000/Plants'" name="back" value="Back"> 
+	</form>
+	{% endblock %}
+	

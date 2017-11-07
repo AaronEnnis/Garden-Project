@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+	 
+	{% block body %}	
+
+	<h1>Schedules </h1>
+	
+	{{word}}<br><br>
+	
+    <table>
+        <tr>
+            <th>Name</th><th>Quantity</th><th>Sow Date</th>
+        </tr>
+        {% for veg_id, quantity, sDate, sID in schedule %}
+            <tr>
+			<form action='/DeleteSchedule' method='POST'>
+				<input type="hidden" name="veg_id" value={{veg_id}}>
+				<input type="hidden" name="quantity" value={{quantity}}>
+				<input type="hidden" name="sDate" value={{sDate}}>
+				<input type="hidden" name="schedule_id" value={{sID}}>
+				
+				
+				{%if veg_id == 1:%}				
+                <td>Cabbage</td>
+                <td>{{quantity}}</td>
+                <td>{{sDate}}</td>
+				{%endif%}
+				
+				{%if veg_id == 2:%}				
+                <td>Carrot</td>
+                <td>{{quantity}}</td>
+                <td>{{sDate}}</td>
+				{%endif%}
+				
+				{%if veg_id == 3:%}				
+                <td>Turnip</td>
+                <td>{{quantity}}</td>
+                <td>{{sDate}}</td>
+				{%endif%}				
+				<td><input type="SUBMIT" name="delete" value="Delete"> </td>
+			</form>
+            </tr>
+
+        {% endfor %}
+    </table>
+	
+		 <!--	from here up for pythonanywhere	 -->
+		 
+		<br><br><input type="BUTTON" onclick="window.location.href='http://127.0.0.1:5000/Home'" name="exit" value="Exit"> 
+	{% endblock %}
+	
